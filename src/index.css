@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #faf7f2;
+  --color-ivory-dark: #f2ece0;
+  --color-sage: #7a9e7e;
+  --color-sage-light: #a8c5aa;
+  --color-sage-dark: #4f7152;
+  --color-blush: #d4a5a5;
+  --color-blush-light: #e8c9c9;
+  --color-blush-dark: #b87878;
+  --color-charcoal: #2c2c2c;
+  --color-warm-gray: #6b6560;
+  --color-gold: #c9a96e;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .text-ivory { color: var(--color-ivory); }
+  .text-ivory-dark { color: var(--color-ivory-dark); }
+  .text-sage { color: var(--color-sage); }
+  .text-sage-light { color: var(--color-sage-light); }
+  .text-sage-dark { color: var(--color-sage-dark); }
+  .text-blush { color: var(--color-blush); }
+  .text-blush-dark { color: var(--color-blush-dark); }
+  .text-charcoal { color: var(--color-charcoal); }
+  .text-warm-gray { color: var(--color-warm-gray); }
+  .text-gold { color: var(--color-gold); }
+
+  .bg-ivory { background-color: var(--color-ivory); }
+  .bg-ivory-dark { background-color: var(--color-ivory-dark); }
+  .bg-sage { background-color: var(--color-sage); }
+  .bg-sage-light { background-color: var(--color-sage-light); }
+  .bg-sage-dark { background-color: var(--color-sage-dark); }
+  .bg-blush { background-color: var(--color-blush); }
+  .bg-blush-light { background-color: var(--color-blush-light); }
+  .bg-charcoal { background-color: var(--color-charcoal); }
+  .bg-gold { background-color: var(--color-gold); }
+
+  .border-sage { border-color: var(--color-sage); }
+  .border-blush { border-color: var(--color-blush); }
+  .border-ivory-dark { border-color: var(--color-ivory-dark); }
+  .border-gold { border-color: var(--color-gold); }
+
+  .hover\:text-sage:hover { color: var(--color-sage); }
+  .hover\:text-sage-dark:hover { color: var(--color-sage-dark); }
+  .hover\:text-blush-dark:hover { color: var(--color-blush-dark); }
+  .hover\:bg-sage-dark:hover { background-color: var(--color-sage-dark); }
+  .hover\:bg-ivory-dark:hover { background-color: var(--color-ivory-dark); }
+  .hover\:border-sage:hover { border-color: var(--color-sage); }
+  .hover\:border-blush-dark:hover { border-color: var(--color-blush-dark); }
+  .hover\:bg-charcoal:hover { background-color: var(--color-charcoal); }
+  .hover\:text-ivory:hover { color: var(--color-ivory); }
+  .hover\:bg-sage:hover { background-color: var(--color-sage); }
+  .hover\:text-gold:hover { color: var(--color-gold); }
+  .hover\:bg-blush-light:hover { background-color: var(--color-blush-light); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage-light);
+  border-radius: 3px;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+/* Prose-style text */
+.prose-floral p {
+  line-height: 1.8;
+  color: var(--color-warm-gray);
+}
